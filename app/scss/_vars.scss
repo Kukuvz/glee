@@ -1,28 +1,43 @@
 $accent: #436372;
 $default: #243f4d;
 $title: #191919;
+$footer: #7b7b7b;
 
 %rubik-400 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik-Regular',
+  sans-serif;
   font-weight: 400;
 }
 
 %rubik-500 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik-Medium',
+  sans-serif;
   font-weight: 500;
 }
 
 %dmsans-400 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DMSans-Regular',
+  sans-serif;
   font-weight: 400;
 }
 
 %dmsans-500 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DMSans-Medium',
+  sans-serif;
   font-weight: 500;
 }
 
 %dmsans-700 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DMSans-Bold',
+  sans-serif;
   font-weight: 700;
+}
+
+%btn {
+  padding: 13px 10px;
+  @extend %rubik-400;
+  line-height: 1;
+  text-transform: capitalize;
+  color: #fff;
+  background-color: #a3bbc8;
 }
