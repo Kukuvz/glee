@@ -1,12 +1,30 @@
+html,
 body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   color: $default;
   font-size: 16px;
   line-height: 30px;
   @extend %dmsans-500;
 }
 
+.main {
+  flex-grow: 1;
+}
+
 .container {
-  max-width: 1800px;
+  max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+a {
+  color: inherit;
+  font-size: 14px;
+  line-height: 32px;
+  @extend %rubik-400;
 }
