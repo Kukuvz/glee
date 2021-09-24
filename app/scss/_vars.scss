@@ -2,6 +2,7 @@ $accent: #436372;
 $default: #243f4d;
 $title: #191919;
 $footer: #7b7b7b;
+$bg: #fef7f0;
 
 %rubik-400 {
   font-family: 'Rubik-Regular',
@@ -40,4 +41,12 @@ $footer: #7b7b7b;
   text-transform: capitalize;
   color: #fff;
   background-color: #a3bbc8;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
 }
