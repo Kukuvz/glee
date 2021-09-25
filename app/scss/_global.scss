@@ -32,3 +32,28 @@ a {
   line-height: 32px;
   @extend %rubik-400;
 }
+
+.title {
+  margin-bottom: 30px;
+  font-size: 36px;
+  @extend %dmsans-700;
+  color: $title;
+}
+
+.filter__buttons {
+}
+
+.filter__btn {
+  padding: 0 15px;
+  @extend %dmsans-700;
+  line-height: 1;
+  border: none;
+  text-transform: capitalize;
+  color: $grey;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.mixitup-control-active {
+  color: #1a1a1a;
+}

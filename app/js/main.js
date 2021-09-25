@@ -1,4 +1,5 @@
 $(function() {
+  //main slider
   $('.top-slider__inner').slick({
     dots: true,
     arrows: false,
@@ -6,4 +7,7 @@ $(function() {
     autoplay: true,
     autoplaySpeed: 2000,
   });
+
+  //product filter
+  var mixer = mixitup('.product__items');
 });
