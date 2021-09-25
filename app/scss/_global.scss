@@ -37,10 +37,13 @@ a {
   margin-bottom: 30px;
   font-size: 36px;
   @extend %dmsans-700;
+  text-align: center;
+  text-transform: capitalize;
   color: $title;
 }
 
 .filter__buttons {
+  text-align: center;
 }
 
 .filter__btn {
