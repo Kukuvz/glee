@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -59,4 +59,32 @@ a {
 
 .mixitup-control-active {
   color: #1a1a1a;
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    position: relative;
+    padding-right: 20px;
+    color: #83898f;
+    &::after {
+      content: '/';
+      position: absolute;
+      right: 10px;
+      transform: translateX(50%);
+    }
+    &:last-child {
+      padding-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    color: inherit;
+  }
 }

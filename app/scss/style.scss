@@ -5,9 +5,6 @@
 @import 'global';
 
 .header {
-  // &__container {
-  //   max-width: 1800px;
-  // }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -186,6 +183,20 @@
   }
   &__item+.footer-menu__item .footer-menu__item-link {
     border-left: 1px solid $grey;
+  }
+}
+
+.top {
+  padding: 30px 0;
+  text-align: center;
+  background-color: #edf1f4;
+  &__title {
+    margin-bottom: 5px;
+    font-size: 36px;
+    @extend %rubik-400;
+    text-indent: 0.45px;
+    color: #222933;
+
   }
 }
 
@@ -454,14 +465,217 @@
   }
 }
 
+.news {
+  position: relative;
+  padding-top: 100px;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 172px;
+    background-color: $bg;
+    z-index: -1;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+  &__title {
+    font-size: 36px;
+    line-height: 1.2;
+    @extend %dmsans-700;
+    color: $default;
+  }
+  &__top-link {
+    position: relative;
+    padding-right: 25px;
+    line-height: 1.2;
+    @extend %dmsans-700;
+    color: $default;
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 11px;
+      background-image: url('../images/icons/arrow-left.svg');
+    }
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    max-width: 370px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    background-color: #fff;
+  }
+  &__item-imglink {
+    display: block;
+    img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+  }
+  &__item-link {
+    position: absolute;
+    top: -16px;
+    left: 30px;
+    padding: 7px 30px;
+    @extend %dmsans-700;
+    font-size: 14px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 30px;
+    background-color: #a3bbc8;
+    z-index: 4;
+  }
+  &__item-box {
+    position: relative;
+    padding: 30px 30px 10px;
+  }
+  &__item-text {
+    @extend %dmsans-500;
+    min-height: 80px;
+    font-size: 18px;
+    line-height: 1.2;
+    border-bottom: 1px solid #e0e0e0;
+    color: #262626;
+  }
+  &__item-info {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+  }
+  &__item-date,
+  &__item-author {
+    position: relative;
+    padding: 0 20px;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #222933;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -1px;
+      width: 15px;
+      height: 15px;
+    }
+  }
+  &__item-author::before {
+      background-image: url('../images/icons/user.svg');
+  }
+  &__item-date::before {
+      background-image: url('../images/icons/time.svg');
+  }
+}
+
 .partners {
-  padding: 85px 0;
+  padding: 50px 0;
   background-color: $bg;
   &__list {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 170px;
+  }
+}
+
+.modal {
+  margin: 0 auto 120px;
+  padding-top: 115px;
+  max-width: 570px;
+  &__label {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 14px;
+    @extend %rubik-500;
+    color: #436372;
+  }
+  &__label--check {
+    margin-bottom: 0;
+  }
+  &__input {
+    display: block;
+    margin-top: 4px;
+    padding: 0 15px;
+    height: 60px;
+    width: 100%;
+    border: 1px solid #f6f6f6;
+  }
+  &__btn {
+    display: block;
+    padding: 14px 0;
+    width: 100%;
+    @extend %rubik-500;
+    border: none;
+    text-transform: capitalize;
+    color: #fff;
+    background-color: #a3bbc8;
+    cursor: pointer;
+  }
+  &__btn--create {
+    color: $default;
+    border: 1px solid #a3bbc8;
+    background-color: #fff;
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-bottom: 1px solid #f6f6f6;
+  }
+  &__question {
+    display: block;
+    @extend %rubik-500;
+    color: #436372;
+  }
+  &__question--nonreg {
+    text-align: center;
+    margin: 30px 0 25px;
+  }
+}
+
+.terms {
+  &__inner {
+    padding-top: 115px;
+    & .terms__list {
+      padding-left: 27px;
+    }
+  }
+  &__text-box {
+    padding-bottom: 70px;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+    @extend %rubik-500;
+    font-size: 24px;
+    color: $default;
+  }
+  &__text {
+    @extend %rubik-400;
+    color: $default;
+  }
+  &__list {
+    list-style-type: decimal-leading-zero;
+  }
+  &__list-item {
+    padding-left: 10px;
+    margin-bottom: 30px;
   }
 }
 

@@ -8,11 +8,7 @@ $(function() {
     autoplaySpeed: 2000,
   });
 
-  // //product filter
-  // var mixer = mixitup('.product__items');
-
-  // //design filter
-  // var mixer2 = mixitup('.new-design__items');
+  //product filter & design filter
 
   var containerEl1 = document.querySelector('[data-ref="product"]');
   var containerEl2 = document.querySelector('[data-ref="new-design"]');
