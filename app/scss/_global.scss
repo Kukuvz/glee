@@ -88,3 +88,35 @@ a {
     color: inherit;
   }
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  .pagination__list {
+    display: flex;
+    padding-right: 16px;
+  }
+  &__item+.pagination__item {
+    margin-left: 16px;
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    @extend %rubik-400;
+    border: 1px solid #a3bbc8;
+    color: $default;
+    transition: all .3s;
+    &:hover {
+      background-color: #a3bbc8;
+      color: #fff;
+    }
+  }
+  &__next {
+    width: 75px;
+    text-transform: capitalize;
+  }
+}
