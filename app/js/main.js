@@ -1,5 +1,33 @@
 $(function() {
 
+  //styler select in shop-filter
+  $('.product-one__num').styler();
+
+  //slider on product details page
+  $('.product-slide__thumbs').slick({
+    asNavFor: '.product-slide__big',
+    focusOnSelect: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false,
+  });
+  $('.product-slide__big').slick({
+    asNavFor: '.product-slide__thumbs',
+    draggable: false,
+    arrows: false,
+    fade: true,
+  });
+
+  //star ratings in product detail page
+  $(".product-one__star").rateYo({
+    starWidth: "18px",
+    spacing: "13px",
+    normalFill: "#ccccce",
+    ratedFill: "#ffc35b",
+    readOnly: true,
+  });
+
   //star ratings in recent products
   $(".recent-products__star").rateYo({
     starWidth: "11px",
