@@ -308,6 +308,7 @@
   &__item {
     padding: 25px 0 35px;
     max-width: 270px;
+    text-align: center;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
@@ -682,7 +683,7 @@
   }
 }
 
-.star {
+.product__item-star {
   display: none;
 }
 
@@ -749,7 +750,7 @@
       font-size: 40px;
       color: #333333;
     }
-    .star {
+    .product__item-star {
       display: block;
       margin-bottom: 40px;
     }
@@ -902,6 +903,34 @@
   }
 }
 
+.filter-search {
+  &__form {
+    display: flex;
+    height: 43px;
+    width: 270px;
+    border: 1px solid #edf1f4;
+    border-radius: 5px;
+  }
+  &__input {
+    padding: 0 15px 0 15px;
+    width: 100%;
+    border: none;
+    background-color: #fff;
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1px;
+    min-width: 48px;
+    height: 43px;
+    border: none;
+    border-radius: 5px;
+    background-color: #edf1f4;
+    cursor: pointer;
+  }
+}
+
 .recent-products {
   &__item {
     display: flex;
@@ -945,11 +974,8 @@
   padding: 0;
 }
 
-.product-page {
-  padding: 120px 0 20px;
-}
-
 .product-one {
+  padding-top: 120px;;
   &__inner {
     display: flex;
   }
@@ -1060,9 +1086,15 @@
     height: 156px;
     margin-bottom: 30px;
   }
+  .slick-list {
+    height: 528px !important;
+  }
   &__thumbs {
     width: 134px;
     margin-right: 30px;
+    .slick-slide:last-child {
+      margin-bottom: 0;
+    }
   }
   &__thumb {
     margin-bottom: 30px;
@@ -1071,6 +1103,9 @@
     height: 156px;
     border: 2px solid #f2f2f2;
     cursor: pointer;
+    &:last-child {
+      margin-bottom: 0;
+    }
     img {
       width: 134px;
       height: 152px;
@@ -1089,6 +1124,96 @@
   &__big-item {
     padding: 0 75px;
     border: 2px solid #f2f2f2;
+  }
+}
+
+.product-tabs {
+  padding: 100px 0 120px;
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+  &__top-item {
+    padding: 11px 20px;
+    min-width: 240px;
+    border-radius: 5px;
+    @extend %rubik-500;
+    font-size: 18px;
+    text-align: center;
+    background-color: #edf1f4;
+    & + .product-tabs__top-item {
+      margin-left: 15px;
+    }
+  }
+  &__top-item--active {
+    color: #fff;
+    background-color: #a3bbc8;
+  }
+  &__content-item {
+    display: none;
+
+    &.product-tabs__content-item--active {
+      display: block;
+    }
+  }
+  &__content-text {
+    @extend %rubik-400;
+    color: $default;
+  }
+}
+
+.related {
+  &__title {
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: $default;
+  }
+  &__container {
+    max-width: 1230px;
+    margin: 0 auto;
+  }
+  &__items {
+    .product__item {
+      width: 270px;
+      height: 380px;
+    }
+
+    .slick-list {
+      padding-left: 30px;
+      margin-right: 30px;
+    }
+
+    .slick-slide {
+      padding: 40px 0;
+      padding-right: 30px;
+    }
+
+    .slick-prev,
+    .slick-next {
+      position: absolute;
+      top: -80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border: 1px solid #a3bbc8;
+      border-radius: 5px;
+      background-color: #fff;
+      z-index: 5;
+      cursor: pointer;
+    }
+    .slick-disabled {
+      border-color: #edf1f4;
+    }
+    .slick-prev {
+      right: 100px;
+    }
+    .slick-next {
+      right: 30px;
+    }
   }
 }
 
@@ -1276,6 +1401,138 @@
     background-color: #f6f6f6;
     &+ .team__content-link {
       margin-left: 8px;
+    }
+  }
+}
+
+.blog-page {
+  padding: 120px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    .pagination {
+      justify-content: start;
+      padding-top: 30px;
+      margin-bottom: 120px;
+    }
+  }
+  &__content {
+    margin-right: 70px;
+    width: 830px;
+  }
+  &__aside {
+    width: 270px;
+  }
+  &__item {
+    margin-bottom: 50px;
+  }
+  &__item-link {
+    position: relative;
+    display: block;
+    margin-bottom: 40px;
+  }
+  &__img {
+    display: block;
+    max-width: 830px;
+    height: 500px;
+    object-fit: cover;
+  }
+  &__box {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 23px;
+    padding-right: 30px;
+    width: 275px;
+    height: 70px;
+    @extend %rubik-400;
+    font-size: 12px;
+    color: #fff;
+    background-color: #a3bbc8;
+  }
+  &__box-author,
+  &__box-date {
+    position: relative;
+    padding-left: 20px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 13px;
+      height: 15px;
+    }
+  }
+  &__box-author::before {
+    background-image: url('../images/icons/user-white.svg');
+  }
+  &__box-date::before {
+    background-image: url('../images/icons/calendar-white.svg');
+  }
+  &__item-title {
+    margin-bottom: 40px;
+    @extend %rubik-400;
+    font-size: 36px;
+    color: #333333;
+  }
+  &__item-text {
+    margin-bottom: 40px;
+    @extend %rubik-400;
+    color: $default;
+  }
+  &__item-linkmore {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 20px;
+    width: 180px;
+    @extend %rubik-500;
+    font-size: 15px;
+    color: #a3bbc8;
+    border: 1px solid #a3bbc8;
+  }
+}
+
+.recent-post {
+  &__item {
+    display: flex;
+    margin-bottom: 20px;
+    &+.latest-post__item {
+      padding-top: 20px;
+      border-top: 1px solid #ececec;
+    }
+  }
+  &__img-link {
+    display: block;
+    margin-right: 20px;
+    min-width: 70px;
+    height: 70px;
+  }
+  &__img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+  }
+  &__title-link {
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+  }
+  &__date {
+    position: relative;
+    padding-left: 20px;
+    color: #9a9a9a;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 13px;
+      height: 13px;
+      background-image: url('../images/icons/calendar.svg');
     }
   }
 }
