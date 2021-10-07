@@ -1754,5 +1754,109 @@
   }
 }
 
+.contact {
+  padding: 120px 0 35px;
+  &__inner {
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 70px;
+    @extend %dmsans-700;
+    font-size: 35px;
+    color: $accent;
+  }
+  &__subtitle {
+    margin-bottom: 10px;
+    @extend %dmsans-700;
+    color: #a3bbc8;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    padding: 70px 0;
+    width: 370px;
+    height: 383px;
+    border: 1px solid transparent;
+    background-color: #fbfbfb;
+    transition: all .3s;
+    &:hover {
+      border: 1px solid #a3bbc8;
+      .contact__item-imglink {
+        background-color: #a3bbc8;
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+  &__item-imglink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+    background-color: #fff;
+    transition: all .3s;
+  }
+  &__item-title {
+    margin-bottom: 20px;
+    @extend %dmsans-700;
+    font-size: 20px;
+    color: #222222;
+  }
+  &__item-text {
+    @extend %rubik-400;
+    color: #565872;
+    a {
+      display: block;
+      @extend %rubik-400;
+      font-size: 16px;
+      color: #565872;
+    }
+  }
+  &__form-map {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 120px;
+    .contact-form {
+      text-align: left;
+    }
+    .contact-form {
+      padding-bottom: 0;
+    }
+    .comments-form__box-input {
+      width: 620px;
+    }
+    .comments-form__text-input {
+      width: 300px;
+      background-position: 262px center;
+    }
+    .comments-form__text-input--email {
+      background-position: 253px center;
+    }
+    .comments-form__textarea {
+      height: 175px;
+      background-position: 572px 19px;
+    }
+    .comments-form__btn {
+      border-radius: 5px;
+      @extend %rubik-500;
+      font-size: 15px;
+    }
+  }
+}
+
+#map {
+  width: 500px;
+  height: 340px;
+}
+
+
 
 @import 'media';
