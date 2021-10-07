@@ -778,6 +778,9 @@
       background-color: #a3bbc8;
       cursor: pointer;
     }
+    .pagination {
+      justify-content: start;
+    }
   }
   &__inner {
     display: flex;
@@ -1534,6 +1537,220 @@
       height: 13px;
       background-image: url('../images/icons/calendar.svg');
     }
+  }
+}
+
+.blog-one {
+  &__img-box {
+    position: relative;
+  }
+  &__left-img {
+    float: left;
+    clear: both;
+    margin-right: 30px;
+  }
+  &__right-img {
+    float: right;
+    clear: both;
+    margin-left: 30px;
+  }
+  &__text {
+    padding: 40px 0 35px;
+    color: $default;
+    h6 {
+      margin: 25px 0;
+      @extend %rubik-500;
+      font-size: 16px;
+      line-height: 30px;
+    }
+    p {
+      margin: 25px 0;
+    }
+    blockquote {
+      margin: 25px 0;
+      padding: 25px 100px 25px 40px;
+      @extend %rubik-400;
+      border-left: 7px solid #a3bbc8;
+      background-color: #edf1f4;
+      div {
+        position: relative;
+        padding-left: 45px;
+        &::before {
+          content: '';
+          position: absolute;
+          left: 5px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 20px;
+          height: 4px;
+          background-color: #a3bbc8;
+        }
+      }
+    }
+    div {
+      margin: 47px 0 45px;
+      overflow: hidden;
+    }
+  }
+  &__text-title {
+    @extend %rubik-400;
+    font-size: 36px;
+    color: #333333;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    @extend %rubik-400;
+    color: #a1a1a1;
+  }
+  &__author {
+    display: flex;
+    align-items: center;
+  }
+  &__author-img {
+    margin-right: 30px;
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+  }
+  &__author-name {
+    @extend %rubik-500;
+    font-size: 18px;
+    color: #333333;
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__tags,
+  &__share {
+    span {
+      margin-right: 20px;
+      color: #333333;
+    }
+  }
+  &__tags span {
+    margin-right: 33px;
+  }
+  &__share {
+    a {
+      margin-right: 20px;
+      vertical-align: middle;
+      &:hover {
+        path {
+          fill: $accent;
+        }
+      }
+    }
+  }
+}
+
+.comments {
+  display: flex;
+  padding-top: 30px;
+  &__title {
+    margin: 30px 0;
+    @extend %rubik-500;
+    font-weight: 700;
+    font-size: 24px;
+    color: $default;
+  }
+  &__img {
+    margin-right: 30px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  &__content-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &__content-name {
+    @extend %rubik-500;
+    font-weight: 700;
+    color: $accent;
+  }
+  &__content-date {
+    @extend %rubik-400;
+    font-size: 14px;
+    color: #9e9e9e;
+  }
+  &__content-text {
+    margin-bottom: 20px;
+    @extend %rubik-400;
+    color: #565872;
+  }
+  &__content-reply {
+    position: relative;
+    padding-right: 23px;
+    color: #516278;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 0;
+      width: 13px;
+      height: 15px;
+      background-image: url('../images/icons/arrow-right-solid.svg');
+    }
+  }
+  &__content-item {
+    padding-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+  }
+}
+
+.comments-form {
+  padding-bottom: 120px;
+  &__box-input {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__text-input {
+    display: inline-block;
+    padding: 15px 40px 15px 20px;
+    width: 400px;
+    height: 50px;
+    border: 1px solid #e5e5e5;
+    background-image: url('../images/icons/user-blog-icon.svg');
+    background-repeat: no-repeat;
+    background-position: 370px center;
+    &:focus {
+      border-color: #a3bbc8;
+      outline: transparent;
+    }
+  }
+  &__text-input--email {
+    background-image: url('../images/icons/mail-icon.svg');
+    background-position: 363px center;
+  }
+  &__textarea {
+    display: block;
+    padding: 15px 40px 15px 20px;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 225px;
+    border: 1px solid #e5e5e5;
+    resize: none;
+    background-image: url('../images/icons/textarea-icon.svg');
+    background-repeat: no-repeat;
+    background-position: 790px 19px;
+    &:focus {
+      border-color: #a3bbc8;
+      outline: transparent;
+    }
+  }
+  &__btn {
+    padding: 17px 35px;
+    @extend %btn;
+    border: none;
+    text-transform: uppercase;
   }
 }
 
