@@ -1,0 +1,95 @@
+.footer {
+  color: $grey;
+}
+
+.footer-top {
+  padding: 70px 0;
+  display: flex;
+  border-bottom: 1px solid #dae4e9;
+
+  &__contact {
+    margin-right: 100px;
+    width: 200px;
+  }
+
+  &__nav {
+    margin-top: 30px;
+    margin-right: 130px;
+    width: 170px;
+  }
+
+  &__item-form {
+    margin-top: 30px;
+    max-width: 270px;
+  }
+
+  &__adress,
+  &__email,
+  &__phone {
+    display: block;
+    margin-top: 20px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #1f2044;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  &__text {
+    margin-bottom: 35px;
+  }
+
+  &__form-input {
+    padding: 14px 15px 14px;
+    max-width: 170px;
+    width: 100%;
+    border: none;
+    font-size: 12px;
+    line-height: 1;
+    background-color: $bg;
+
+    &::placeholder {
+      font-size: 12px;
+      color: #234969;
+    }
+  }
+
+  &__form-btn {
+    margin-left: -1px;
+    border: none;
+    @extend %btn;
+    cursor: pointer;
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  font-size: 14px;
+}
+
+.footer-menu {
+  &__list {
+    display: flex;
+  }
+
+  &__item-link {
+    padding: 3px 15px;
+    text-transform: capitalize;
+  }
+
+  &__item+.footer-menu__item .footer-menu__item-link {
+    border-left: 1px solid $grey;
+  }
+}

@@ -85,7 +85,9 @@ a {
     }
   }
   &__link {
-    color: inherit;
+    font-size: 14px;
+    @extend %rubik-400;
+    color: #83898f;
   }
 }
 

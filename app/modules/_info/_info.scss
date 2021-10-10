@@ -1,0 +1,35 @@
+.info {
+  &__inner {
+    display: flex;
+    background-color: $bg;
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+  &__item+.info__item {
+    border-left: 1px solid #e8e4df;
+  }
+
+  &__item-inner {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item-textbox {
+    margin-left: 20px;
+  }
+
+  &__item-title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  &__item-text {
+    max-width: 215px;
+    color: #585858;
+  }
+}
