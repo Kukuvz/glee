@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glee</title>
+  <link rel="stylesheet" href="css/about.min.css">
+</head>
+
+<body>
+  {% include ('app/modules/_header/_header.html') %}
+
+  <main class="main">
+    <section class="top">
+      <div class="container">
+        <h2 class="top__title">About Us</h2>
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">
+                Home
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">
+                About Us
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    {% include ('app/modules/_about/_about.html') %}
+    {% include ('app/modules/_about-info/_about-info.html') %}
+    {% include ('app/modules/_team/_team.html') %}
+    {% include ('app/modules/_news/_news.html') %}
+    {% include ('app/modules/_partners/_partners.html') %}
+  </main>
+
+  {% include ('app/modules/_footer/_footer.html') %}
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
