@@ -33,3 +33,32 @@
     color: #585858;
   }
 }
+
+@media (max-width: 1050px) {
+  .info {
+    &__inner {
+      display: block;
+    }
+    &__item-inner {
+      padding: 20px;
+    }
+    &__item {
+      width: 100%;
+    }
+    &__item+.info__item {
+      border-left: none;
+      border-top: 1px solid #e8e4df;
+    }
+    &__item-title {
+      margin: 20px 0 10px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .info {
+    &__item-title {
+      font-size: 16px;
+    }
+  }
+}

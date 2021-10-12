@@ -56,3 +56,42 @@
     }
   }
 }
+
+@media (max-width: 1235px) {
+  .special {
+    &__item-inner {
+      height: 350px;
+    }
+    &__item-content {
+      margin-left: 10px;
+    }
+    &__item-img {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .special {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item {
+      padding-top: 0;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .special {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item-title {
+      font-size: 22px;
+    }
+    &__item-text {
+      font-size: 14px;
+    }
+  }
+}
