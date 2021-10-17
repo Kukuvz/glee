@@ -11,59 +11,7 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="container container__wide">
-      <div class="header__inner">
-        <a class="logo" href="#">
-          <img class="logo__img" src="images/logo.svg" alt="logo">
-          Glee.
-        </a>
-        <nav class="menu">
-          <button class="menu__btn">
-            <span></span>
-          </button>
-          <ul class="menu__list">
-            <li class="menu__list-item">
-              <a href="#" class="menu__list-link">Home</a>
-            </li>
-            <li class="menu__list-item">
-              <a class="menu__list-link" href="#">About</a>
-            </li>
-            <li class="menu__list-item">
-              <a class="menu__list-link" href="#">Services</a>
-            </li>
-            <li class="menu__list-item">
-              <a class="menu__list-link" href="#">Pages</a>
-            </li>
-            <li class="menu__list-item">
-              <a class="menu__list-link" href="#">News</a>
-            </li>
-            <li class="menu__list-item">
-              <a class="menu__list-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="user-nav">
-          <a class="user-nav__link user-nav__link-search" href="#">
-            <img class="user-nav__link-img" src="images/icons/search.svg" alt="search icon">
-          </a>
-          <div class="user-nav__long">
-            <a class="user-nav__link" href="#">
-              <img class="user-nav__link-img" src="images/icons/heart.svg" alt="heart icon">
-              <span class="user-nav__num">0</span>
-            </a>
-            <a class="user-nav__link" href="#">
-              <img class="user-nav__link-img" src="images/icons/cart.svg" alt="cart">
-              <span class="user-nav__num">0</span>
-            </a>
-          </div>
-          <a class="user-nav__link user-nav__link-buttons" href="#">
-            <img class="user-nav__link-img" src="images/icons/dots.svg" alt="dots icon">
-          </a>
-        </div>
-      </div>
-    </div>
-  </header>
+  {% include ('app/modules/_header/_header.html') %}
 
   <main class="main">
 
@@ -151,90 +99,8 @@
       </div>
     </section>
 
-    <section class="news">
-  <div class="container">
-    <div class="news__inner">
-      <div class="news__top">
-        <h3 class="news__title">Our Insights & Articles</h3>
-        <a class="news__top-link" href="#">View All</a>
-      </div>
-      <div class="news__content">
-        <div class="news__items">
-
-          <div class="news__item">
-            <a class="news__item-imglink" href="#">
-              <img src="images/blog/1.jpg" alt="news img">
-            </a>
-            <div class="news__item-box">
-              <a class="news__item-link" href="#">news</a>
-              <p class="news__item-text">
-                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-              </p>
-              <div class="news__item-info">
-                <div class="news__item-date">10 January, 2020</div>
-                <a class="news__item-author" href="#">By Admin</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="news__item">
-            <a class="news__item-imglink" href="#">
-              <img src="images/blog/2.jpg" alt="news img">
-            </a>
-            <div class="news__item-box">
-              <a class="news__item-link" href="#">news</a>
-              <p class="news__item-text">
-                Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              </p>
-              <div class="news__item-info">
-                <div class="news__item-date">10 January, 2020</div>
-                <a class="news__item-author" href="#">By Admin</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="news__item">
-            <a class="news__item-imglink" href="#">
-              <img src="images/blog/3.jpg" alt="news img">
-            </a>
-            <div class="news__item-box">
-              <a class="news__item-link" href="#">news</a>
-              <p class="news__item-text">
-                Rncididunt ut labore et dolore magna aliqua. Ut enim
-              </p>
-              <div class="news__item-info">
-                <div class="news__item-date">10 January, 2020</div>
-                <a class="news__item-author" href="#">By Admin</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-    <div class="partners">
-  <div class="container">
-    <ul class="partners__list">
-      <li class="partners__item">
-        <img src="images/partners/1.png" alt="partner logo">
-      </li>
-      <li class="partners__item">
-        <img src="images/partners/2.png" alt="partner logo">
-      </li>
-      <li class="partners__item">
-        <img src="images/partners/3.png" alt="partner logo">
-      </li>
-      <li class="partners__item">
-        <img src="images/partners/4.png" alt="partner logo">
-      </li>
-      <li class="partners__item">
-        <img src="images/partners/5.png" alt="partner logo">
-      </li>
-    </ul>
-  </div>
-</div>
+    {% include ('app/modules/_news/_news.html') %}
+    {% include ('app/modules/_partners/_partners.html') %}
   </main>
 
   <footer class="footer">

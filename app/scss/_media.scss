@@ -1,0 +1,160 @@
+@media(max-width: 1200px) {
+  .contact {
+    &__items {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    &__form-map {
+      display: block;
+    }
+  }
+
+  .contact-form {
+    margin-bottom: 30px;
+  }
+
+  .contact__form-map {
+    .comments-form__box-input {
+      width: 100%;
+    }
+    .comments-form__text-input {
+      width: calc(50% - 10px);
+      background-position: calc(100% - 24px) center;
+    }
+    .comments-form__text-input--email {
+      background-position: calc(100% - 30px) center;
+    }
+    .comments-form__textarea {
+      background-position: calc(100% - 30px) 19px;
+    }
+  }
+
+  #map {
+    width: 100%;
+  }
+  
+  .product-slide {
+    &__thumbs {
+      display: none;
+    }
+  }
+
+  .product-one {
+    &__slide {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media(max-width: 860px) {
+  .terms {
+    &__inner {
+      padding-top: 60px;
+    }
+  }
+
+  .contact {
+    &__form-map {
+      padding-top: 60px;
+    }
+  }
+
+  .product-one {
+    &__inner {
+      display: block;
+    }
+    &__slide {
+      justify-content: center;
+      margin: 0 auto;
+      width: auto;
+    }
+    &__content {
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width: 800px) {
+  .product-tabs {
+    &__top {
+      display: block;
+    }
+    &__top-item {
+      display: block;
+      margin-bottom: 10px;
+    }
+    &__top-item+.product-tabs__top-item {
+      margin-left: 0;
+
+    }
+  }
+}
+
+@media(max-width: 620px) {
+  .related {
+    &__title {
+      font-size: 28px;
+    }
+  }
+}
+
+@media(max-width: 500px) {
+  .comments-form {
+    &__box-input {
+      display: block;
+    }
+  }
+
+  .contact__form-map {
+    .comments-form__text-input {
+      display: block;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width: 450px) {
+  .terms {
+    &__inner {
+      padding-top: 30px;
+    }
+    &__title {
+      font-size: 22px;
+    }
+    &__text-box {
+      padding-bottom: 30px;
+    }
+  }
+
+  .product-slide {
+    &__big {
+      margin: 0 15px;
+      width: 100%;
+    }
+    &__big-item {
+      img {
+        height: 400px;
+      }
+    }
+  }
+
+  .product-one {
+    &__btn {
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  .related {
+    &__title {
+      margin-bottom: 70px;
+    }
+    &__items .slick-prev,
+    &__items .slick-next {
+      top: -50px;
+    }
+  }
+  
+}
