@@ -1,0 +1,34 @@
+.partners {
+  padding: 50px 0;
+  background-color: $bg;
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 170px;
+  }
+}
+
+@media (max-width: 860px) {
+  .partners {
+    padding: 20px 0;
+    &__list {
+      flex-wrap: wrap;
+      justify-content: center;
+      height: auto;
+    }
+
+    &__item {
+      margin: 10px 35px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .partners {
+    &__item {
+      margin: 10px 25px;
+    }
+  }
+}

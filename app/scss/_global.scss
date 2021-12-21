@@ -17,9 +17,13 @@ body {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.container__wide {
+  max-width: 1800px;
 }
 
 a {
@@ -27,4 +31,106 @@ a {
   font-size: 14px;
   line-height: 32px;
   @extend %rubik-400;
+}
+
+.title {
+  margin-bottom: 30px;
+  font-size: 36px;
+  @extend %dmsans-700;
+  text-align: center;
+  text-transform: capitalize;
+  color: $title;
+}
+
+.filter__buttons {
+  text-align: center;
+}
+
+.filter__btn {
+  padding: 0 15px;
+  @extend %dmsans-700;
+  line-height: 1;
+  border: none;
+  text-transform: capitalize;
+  color: $grey;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.mixitup-control-active {
+  color: #1a1a1a;
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    position: relative;
+    padding-right: 20px;
+    color: #83898f;
+    &::after {
+      content: '/';
+      position: absolute;
+      right: 10px;
+      transform: translateX(50%);
+    }
+    &:last-child {
+      padding-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    font-size: 14px;
+    @extend %rubik-400;
+    color: #83898f;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  .pagination__list {
+    display: flex;
+    padding-right: 16px;
+  }
+  &__item+.pagination__item {
+    margin-left: 16px;
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    @extend %rubik-400;
+    border: 1px solid #a3bbc8;
+    color: $default;
+    transition: all .3s;
+    &:hover {
+      background-color: #a3bbc8;
+      color: #fff;
+    }
+  }
+  &__next {
+    width: 75px;
+    text-transform: capitalize;
+  }
+}
+
+@media (max-width: 620px) {
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 375px) {
+  .title {
+    font-size: 26px;
+  }
 }

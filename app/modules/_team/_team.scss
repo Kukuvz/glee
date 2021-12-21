@@ -1,0 +1,138 @@
+.team {
+  padding: 120px 0 75px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__descr {
+    max-width: 310px;
+    color: $default;
+  }
+
+  &__descr-title {
+    margin-bottom: 30px;
+    padding-top: 5px;
+    @extend %dmsans-700;
+    font-size: 36px;
+  }
+
+  &__descr-text {
+    margin-bottom: 70px;
+    @extend %rubik-400;
+  }
+
+  &__descr-link {
+    @extend %btn;
+    padding: 20px 25px 18px 18px;
+    font-size: 15px;
+    border-radius: 5px;
+
+    svg {
+      margin-left: 20px;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px 30px;
+    max-width: 770px;
+  }
+
+  &__content-item {
+    position: relative;
+  }
+
+  &__content-info {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px 30px 25px;
+    width: 325px;
+    height: 110px;
+    background-color: #fff;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+  }
+
+  &__content-title {
+    @extend %dmsans-700;
+    font-size: 22px;
+    color: $default;
+  }
+
+  &__content-text {
+    @extend %rubik-400;
+    color: #565872;
+  }
+
+  &__content-social {
+    display: flex;
+    align-items: center;
+  }
+
+  &__content-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f6f6f6;
+
+    &+.team__content-link {
+      margin-left: 8px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .team {
+    &__inner {
+      display: block;
+    }
+    &__descr {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .team {
+    &__content {
+      margin: 0 auto;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__descr {
+      display: flex;
+      flex-direction: column;
+    }
+    &__descr-link {
+      align-self: center;
+      max-width: 171px;
+    }
+    &__content-item {
+      justify-self: center;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .team {
+    padding: 60px 0 75px;
+  }
+}
+
+@media (max-width: 450px) {
+  .team {
+    &__content-info {
+      width: 290px;
+    }
+  }
+}
